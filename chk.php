@@ -6,10 +6,10 @@ function register_sale($verb)
 	defined('YII_DEBUG') or define('YII_DEBUG',true);
 	
 	if(isset($_POST['where']) || isset($_POST['code']))
-	$cnx=new CDbConnection('mysql:host=localhost;dbname=world', 'userdb', 'db5e65fb2af18937f7b24b787949866522a0c04f30b21fc9a8dd2979d6e1b866');
+	$cnx=new CDbConnection('mysql:host=tuhost;dbname=tudb', 'tuuserdb', 'tupasswddekaker');
 
 		else
-		$cnx = new CDbConnection('mysql:host=localhost;dbname=productAdmin', 'userdb', 'db5e65fb2af18937f7b24b787949866522a0c04f30b21fc9a8dd2979d6e1b866');
+		$cnx = new CDbConnection('mysql:host=tuhost;dbname=tudb', 'tuuserdb', 'tupasswdkaker');
 	
 	$cnx->active=true;
 	
@@ -318,9 +318,9 @@ function sendMail($mail, $txt, $subject)
 	$mail->SMTPAuth = true;
 	$mail->SMTPDebug = true;
 	$mail->SMTPSecure = 'tls';
-	$mail->Host = 'smtp.googlemail.com';
-	$mail->Username = 'demoopenmarket@gmail.com';
-	$mail->Password = 'pcap_lookupdev';
+	$mail->Host = 'tuSMTP.com';
+	$mail->Username = 'tumail';
+	$mail->Password = 'tupasskaker';
 	$mail->Subject = $subject;
 	$mail->MsgHTML($txt);
 	$mail->AddAddress($mail, 'Compras Usuarios');
@@ -339,7 +339,7 @@ function makePDF($dir)
 	$Fpdf = new HTML2PDF("P", "A4", "es");
 
    $Fpdf->WriteHTML($cuerpo);
-   $Fpdf->Output('cuca.pdf');
+   $Fpdf->Output('ejm.pdf');
 
 }
 
