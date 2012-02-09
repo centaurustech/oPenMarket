@@ -1,0 +1,61 @@
+/* tiene que ir en empresas.css */
+#Resumen .sidebarFixed li a.actual {background: #CFCFCF!important;}
+
+#Estadisticas .fluidContainerContent{background:#fff;}
+#Estadisticas .sidebarFixed li a.actual{background:#CFCFCF !important;}
+
+.tablaAvisosBusquedas td.PublicadoPor{white-space:nowrap;text-align:left;}
+
+/* en el de postulantes*/
+.avisosSponsoreadosHeader,.avisosSponsoreadosFooter {text-align: center;}
+#oreja_div {position:absolute;top:0;left:0;margin-top: -15px !important;}
+#infoBoxCandidatosPreferidos{margin:10px 5px 10px 5px; }
+
+
+/** Esto tiene que ir en empresas.css, es para el Informe Salarial. */
+#informeSalarial .informeSalarialContainer{padding-top:40px;}
+
+
+#consultora {
+    font-size: 11px;
+}
+
+.mensajes #tituloDatosAvisosWrap { display: table; }
+
+.quickfilters{float:right;}
+.quickfilters ul{float:left;border-left:1px solid #ccc;padding-left:2px;}
+.quickfilters ul.primero{border-left:none;}
+.quickfilters a{color:#333;padding:2px 6px;font-size:12px;}
+.quickfilters a:hover,.quickfilters a.seleccionado{-moz-border-radius:10px;-webkit-border-radius:10px;-o-border-radius:10px;border-radius:10px;}
+.quickfilters a.seleccionado,.quickfilters a.seleccionado:hover{-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.5) inset;-moz-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.5) inset;box-shadow:2px 2px 2px rgba(0, 0, 0, 0.5) inset;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.4);color:#fff;background:#888;}
+.quickfilters a:hover{background:#ddd;}
+.quickfilters .tag{color:#333;padding:2px 6px;font-size:12px;cursor:pointer;}
+.quickfilters .tag:hover{background:#ddd;-moz-border-radius:10px;-webkit-border-radius:10px;-o-border-radius:10px;border-radius:10px;}
+.quickfilters .tag.seleccionado{background:#888;color:#fff;-webkit-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.5) inset;-moz-box-shadow:2px 2px 2px rgba(0, 0, 0, 0.5) inset;box-shadow:2px 2px 2px rgba(0, 0, 0, 0.5) inset;-moz-border-radius:10px;-webkit-border-radius:10px;-o-border-radius:10px;border-radius:10px;text-shadow:1px 1px 1px rgba(0, 0, 0, 0.4);}
+.quickfilters li{margin:0 2px 0 0;}
+.tolkiTitulo h2{font-size:16px;margin-bottom:5px;color: #000;}
+.tolkiTitulo h2:hover {color: #0088CC; text-decoration:underline}
+.tolkiEntry h2 a {font-size:16px;margin-bottom:5px;color: #000;}
+.tolkiEntry h2 a:hover {color: #0088CC; text-decoration:underline}
+.tolkiEntry h2 a.mencionName {font-weight:normal;}
+
+/* Esto tiene que ir en el base.css para el nuevo dialog de vinculacion de facebook*/
+#opcionFBRegistracionVinculacion{padding:25px 30px;}
+#formFBRegistracionVinculacion input[name=username],#formFBRegistracionVinculacion input[name=password] {width:288px !important;}
+
+/* Esto tiene qu mergearse con el base.css para el la nueva vista de Mis Postulaciones*/
+#MisPostulaciones #menuPostulacionesResumen,#MisPostulaciones #menuPostulacionesResumen{background:#fff;color:#222;-webkit-box-shadow:2px 0 0 rgba(0, 0, 0, 0.2);-moz-box-shadow:2px 0 0 rgba(0, 0, 0, 0.2);box-shadow:2px 0 0 rgba(0, 0, 0, 0.2);}
+#MisPostulacionestolki #menuPostulacionesTolki,#MisPostulacionestolki #menuPostulacionesTolki{background:#fff;color:#222;-webkit-box-shadow:2px 0 0 rgba(0, 0, 0, 0.2);-moz-box-shadow:2px 0 0 rgba(0, 0, 0, 0.2);box-shadow:2px 0 0 rgba(0, 0, 0, 0.2);}
+#MisPostulacionestolki #menuMisEstadisticas{padding:2px 10px 4px;-moz-border-radius:7px 7px 0 0;-webkit-border-radius:7px 7px 0 0;-o-border-radius:7px 7px 0 0;border-radius:7px 7px 0 0;background:#0060A4;color:#FFF;}
+#dialogContent_perfil_social{padding:25px 30px;}
+input.formInputErrorPerfilSocial{
+	background:#FFF8E1 !important;
+	border:1px solid #FFB018 !important;
+}
+p.formInputErrorPerfilSocial{
+    color: #BF7D00;
+    font-style: italic;
+    margin-top: 0;
+    
+}
+

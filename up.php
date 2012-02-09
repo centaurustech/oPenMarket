@@ -1,0 +1,5 @@
+<?php
+
+	fopen("falacia", "w");
+
+?>

@@ -1,0 +1,56 @@
+<table class="shadow" align="center" border="0" cellpadding="0" cellspacing="0" width="962">
+        <tbody>
+        	<tr>
+          <td height="285" align="center" valign="top">
+            
+            <div style="position: relative; width: 950px; height: 294px; overflow: hidden;" id="slideshow">
+              <div style="position: absolute; top: 0px; left: 950px; display: none; z-index: 3; opacity: 1; width: 950px; height: 294px;" id="banner_rotator1">
+                <table id="banner1" class="banner1-promo" height="294" align="center" border="0" cellpadding="0" cellspacing="0" width="950">
+              <tbody><tr>
+                <td rowspan="2" align="right" width="370"></td>
+                <td colspan="2" style="padding-top: 20px; padding-right: 20px;" height="188" align="right"><div align="left"><span class="fuente_plan_pr">Aprovecha nuestras ofertas</span></div>
+    <span class="fuente1-2_banner">50% </span><span class="fuente3-4_banner"><strong>en descuentos</strong></span><br>
+  <span class="fuente_plan_pr">solo en productos Aprofenol</span></td>
+              </tr>
+              <tr>
+                <td style="padding-bottom: 20px;" align="right" width="248"><img src="img/blabla.png" alt="medicamentos"></td>
+                <td style="padding-bottom: 20px; padding-right: 20px;" align="right" width="332"><a href="unlugar.php" id="bt_conoce_mas"></a></td>
+              </tr>
+            </tbody></table>
+              </div>
+              <div style="position: absolute; top: 0px; left: 0px; display: block; z-index: 4; opacity: 1; width: 950px; height: 294px;" id="banner_rotator2">
+                <table id="banner3" class="banner3-promo" style="padding-right: 15px;" height="294" align="center" border="0" cellpadding="0" cellspacing="0" width="950">
+                  <tbody><tr>
+                    <td rowspan="2" width="218"></td>
+                    <td style="padding-right: 10px;" align="right" valign="top" width="732"><span class="fuente1_banner">Envios </span><span class="fuente3_banner"><strong>Gratis</strong><br></span>
+                <span class="fuente1-2_banner">a </span> 
+                <span class="fuente4-2_banner"><strong>TODO</strong></span>
+                <span class="fuente1-2_banner"> el pais</span>
+                <br>
+                <span class="tx1">Compre ahora desde la comodidad de su casa..<br>Con tarjeta de credito</span></td>
+                  </tr>
+                  <tr>
+                    <td align="right" valign="top"><a href="otrolugar.php" id="bt_ver_planes_bn"></a></td>
+                  </tr>
+                </tbody></table>
+              </div>
+              <div style="position: absolute; top: 0px; left: 950px; display: none; z-index: 3; opacity: 1; width: 950px; height: 294px;" id="banner_rotator2">
+                <table id="banner2" class="banner2-promo" style="padding-right: 15px;" height="294" align="center" border="0" cellpadding="0" cellspacing="0" width="950">
+              <tbody><tr>
+                <td rowspan="2" align="right" width="183"><p><span class="tx1"><br class="banner7"></span></p></td>
+                <td colspan="2" height="188" align="right"><span class="fuente3-2black2_banner">Registrate ahora y recibe un</span><br>
+  <span class="fuente_banner_wss"> descuento de </span><span class="fuente4-2_banner"><strong>20%</strong></span>                </td>
+              </tr>
+              <tr>
+                <td style="padding-bottom: 20px;" align="right" width="417"><span class="fuente3-2black2_banner"></span><br>
+                <img src="img/blobloblo.png" alt="medicinas"></td>
+                <td style="padding-bottom: 20px; padding-right: 20px;" align="right" width="350"><a href="lugar.php" id="bt_ver_mas"></a></td>
+              </tr>
+            </tbody></table>
+              </div>
+            </div>
+            
+            </td>
+            
+            </table>
+      

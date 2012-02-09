@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title></title>
+	
+	
+	<script src="js/jquery-1.js"></script>
+	
+<script type="text/javascript">
+
+function ahaha()
+{
+
+flag= "Jname=" + $('#Jname').val() + "&Jvend=" + $('#Jvend').val() + "&Jdeta=" + $('#Jdeta').val() + "&Jdescrip=" + $('#Jdescrip').val() + "&Jcant=" + $('#Jcant').val() + "&Jlimit=" + $('#Jlimit').val() + "&Jdsc=" + $('#Jdsc').val() + "&Jimg=" + $('#Jimg').val() + "&Jprice=" + $('#Jprice').val() + "&Jkwrd=" + $('#Jkwrd').val() + "&Jrecp=" + $('#Jrecp').val() + "&Jtyp=" + $('#Jtyp').val() + "&Jiva=" + $('#Jiva').val();
+
+$.ajax(
+	{
+				
+		data: flag,
+		type: "POST",
+		dataType: "json",
+		url: "chk.php",			
+	});
+}
+
+$('#Jname').val("");
+$('#Jvend').val();
+
+</script>
+
+</head>
+
+<body>
+
+<p>Nombre</p> <input id="Jname" type="input"></input>
+<p>Vend</p> <input id="Jvend" type="input"></input>
+<p>Detalles</p> <input id="Jdeta" type="input"></input>
+<p>Descripcion</p> <input id="Jdescrip" value="No disponible" type="input"></input>
+<p>Cantidad</p> <input id="Jcant" value="1231231" type="input"></input>
+<p>limite</p> <input id="Jlimit" value="0" type="input"></input>
+<p>dsc</p> <input id="Jdsc" value="31.1" type="input"></input>
+<p>img</p> <input id="Jimg" value="img/.png" type="input"></input>
+<p>price</p> <input id="Jprice" type="input"></input>
+<p>keywords</p> <input id="Jkwrd" value="medicinas" type="input"></input>
+<p>recipe</p> <input id="Jrecp" type="input" value="false"></input>
+<p>type</p> <input id="Jtyp" value="No especificado" type="input"></input>
+<p>iva</p> <input id="Jiva" value="7.1" type="input"></input>
+
+<input value="adasdasdasdasdasdasdasd" onclick="javascript:ahaha()" type="button"></input>
+
+</body>
+</html>

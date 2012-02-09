@@ -1,0 +1,102 @@
+.button {
+	width:570px;
+	height:64px;
+	display:block;
+	background-image:url(../img/downloadbutton.png);
+	background-position: top;
+}
+.button:hover{
+	width:570px; 
+	background-position: bottom;
+	height:64px;
+	background-image:url(../img/downloadbutton.png) no repeat;
+}
+
+/* Tutorial button with jQuery */
+.otherbutton {
+	clear: both;
+	position:relative;
+	display:block;
+	height: 64px;
+	width: 570px;
+	background:url(../img/contact.png) no-repeat;
+	background-position:0 0;
+	cursor: pointer;
+}	
+.otherbutton span.hover {
+	position: absolute;
+	display: block;
+	height: 64px;
+	width: 570px;
+	background: url(../img/contact.png) no-repeat;
+	background-position: bottom;
+}
+
+/* Bonus buttons */
+.downloadbutton {
+	float: left;
+	width:107px;
+	height:38px;
+	display:block;
+	background-image:url(../img/twobuttons.png);
+	background-position: top right;
+}
+.downloadbutton span.hover{
+	position: absolute;
+	display: block;
+	width:107px;
+	height:38px;
+	background-position: bottom right;
+	background-image:url(../img/twobuttons.png);
+}
+.homebutton {
+	float: left;
+	width:120px;
+	height:38px;
+	display:block;
+	background-image:url(../img/twobuttons.png);
+	background-position: top left;
+}
+.homebutton span.hover{
+	position: absolute;
+	display: block;
+	width:120px;
+	height:38px;
+	background-position: bottom left;
+	background-image:url(../img/twobuttons.png);
+}
+
+/* Donate button with jQuery */
+.donatebutton {
+	clear: both;
+	position:relative;
+	display:block;
+	height: 128px;
+	width: 128px;
+	background:url(../img/donate.png) no-repeat;
+	background-position:0 0;
+	cursor: pointer;
+}	
+.donatebutton span.hover {
+	position: absolute;
+	display: block;
+	height: 128px;
+	width: 128px;
+	background: url(../img/donate.png) no-repeat;
+	background-position: bottom;
+}
+
+.donatebutton_alt {
+	display:block;
+	height: 128px;
+	width: 128px;
+	background:url(../img/donate.png) no-repeat;
+	background-position:0 0;
+	cursor: pointer;
+}	
+.donatebutton_alt:hover {
+	height: 128px;
+	width: 128px;
+	background: url(../img/donate.png) no-repeat;
+	background-position: bottom;
+}
