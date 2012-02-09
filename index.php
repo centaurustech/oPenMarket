@@ -309,25 +309,7 @@ $cant=1;
 							
 							</div>
                 </div>
-            </div>
-            
-            <div id="Gprd3" class="roundBox avisoHome oculto">
-                <a href="detalles.php"><img class="logoEmpresaAviso" src="img/bayer.jpg" height="95" width="150"></a>
-                <div class="datosAvisoHome">
-                    <h2>
-                    <a id="Nprd3" href="#" onclick="document.frm3.submit()"></a>
-
-						<form action="detalles.php" method="POST" name="frm3">
-							<input id="Iprd3" type="hidden" type="hidden" name="ident" value="">
-						</form>                    
-                    
-                    </h2>
-                    <h3 id="Dprd3"></h3>
-                    
-
-                </div>
-            </div>           
-            
+            </div>                                
         </div>
                            
             <!--<p class="alignRight">

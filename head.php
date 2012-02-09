@@ -154,7 +154,7 @@ function consulta(typ)
 
 				if(window.location.href.indexOf("fact.php?param=100")>0 || window.location.href.indexOf("formu.php?type=5")>0)
 				{
-					$('#osx-modal-data').append("<input type='checkbox' name='" + data[indx].name + "' value='" + data[indx].name + "' onclick=javascript:msg('" + data[indx].name + "'," + data[indx].price  + "," + data[indx].id + ",1)> <b>" + data[indx].name + "</b><br>" + data[indx].details + "<br><br>");
+                                        $('#osx-modal-data').append("<input type='checkbox' name='" + data[indx].name + "' value='" + data[indx].name + "' onclick=javascript:msg('" + data[indx].name + "'," + data[indx].price  + "," + data[indx].id + ",1)> <b>" + data[indx].name + "</b><br>" + data[indx].details + "<br><br>");
 				}					
 					
 					else
