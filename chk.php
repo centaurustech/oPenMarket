@@ -225,12 +225,16 @@ function register_sale($verb)
 		{
 			
 			echo "select products.price,products.iva,products.dsc from products where id=" . substr($nom, 7) . "<br>";																		
-			$dat = $cnx->createCommand("select products.price,products.iva,products.dsc,products.name from products where id=" . substr($nom, 7))->query();			
+			$dat = $cnx->createCommand("select products.price,products.iva,products.dsc,products.name,products.cant from products where id=" . substr($nom, 7))->query();			
 			$dat->bindColumn(1, $Pprice);
 			$dat->bindColumn(2, $Piva);
 			$dat->bindColumn(3, $Pdsc);
 			$dat->bindColumn(4, $lala);
+			$dat->bindColumn(5, $ahahah);
 			$dat->read();
+			
+			$asd=($ahahah) - ($cont);
+			$cnx->CreateCommand('update products set cant=' . $asd . ' where id=' . substr($nom, 7))->execute();
 			
 		$datos = $datos . " " . $lala . '</td> <td style="width: 15%; text-align: center; border: solid 1px"> ' . $cont . ' </td> <td style="width: 15%; text-align: center; border: solid 1px"> ' . $Piva . ' </td> <td style="width: 15%; text-align: center; border: solid 1px"> ' . $Pdsc . ' </td> <td style="width: 15%; text-align: right; border: solid 1px"> ';
 		
@@ -345,8 +349,8 @@ function register_sale($verb)
 	//$lol="pdf" . date('dmYhms') . ".pdf";
 	//makePDF("modeFACT.php", $fnom . " " . $snom, $dni, $_POST['edoResi'] . " " . $_POST['city'] . " (" . $_POST['paisResi'] . ")", "123", "Santa Ana", $datos, $lol, $_POST['typPago']);			
 					
-        sendMail($cnx->createCommand("select mail from users where id='" . $_COOKIE['pass'] . "'")->queryScalar(), "Hola, " . $fnom . " " . $snom . " has cancelado un total de " . $totalpago . " BsF<br><br>", "Notificacion de compra " . $cnx->createCommand("select name from compania")->queryScalar(), $lol);
-        sendMail("demoopenmarket@gmail.com", "<br><br>Hola Señor(a)" . $fnom . " " . $snom . "<br><br>Hemos registrado su compra satisfactoriamente, si deseas verla e imprimirla <a href='http://testing.servehttp.com/fact.php?flag=" . $cnx->createCommand("select transid from ventas where iduser='" . $_COOKIE['pass'] . "' order by transid DESC")->queryScalar() . "'>Has click en este enlace</a> <br><br> Gracias por preferirnos<br><br>Farmacia Santa Cruz<br><br>", "Notificacion venta", $lol);
+        sendMail($cnx->createCommand("demoopenmarket@gmail.com", "Hola, " . $fnom . " " . $snom . " has cancelado un total de " . $totalpago . " BsF<br><br>", "Notificacion de compra " . $cnx->createCommand("select name from compania")->queryScalar(), "");
+        sendMail("select mail from users where id='" . $_COOKIE['pass'] . "'")->queryScalar(), "<br><br>Hola Señor(a)" . $fnom . " " . $snom . "<br><br>Hemos registrado su compra satisfactoriamente, si deseas verla e imprimirla <a href='http://testing.servehttp.com/fact.php?flag=" . $cnx->createCommand("select transid from ventas where iduser='" . $_COOKIE['pass'] . "' order by transid DESC")->queryScalar() . "'>Has click en este enlace</a> <br><br> Gracias por preferirnos<br><br>Farmacia Santa Cruz<br><br>", "Notificacion compra", "");
 	
 		//header( "HTTP/1.1 301 Moved Permanently"); 
 		//header( "Location: http://testing.servehttp.com/index.php");		

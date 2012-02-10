@@ -326,7 +326,7 @@ echo '<td style="align:center" id="JtDir" align="left" width="2%"><b>Dirección:
 			</div>
 				</div>
 				
-				<p style="font-weight: bold; font-size: 17pt;" id="muestra"></p>				
+				<div style="font-weight: bold; font-size: 17pt;" id="muestra"></p>				
 				
 												
 				

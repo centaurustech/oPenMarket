@@ -16,9 +16,9 @@
 			 
 	?>
 			 		
-		<a class="avisoSimilar" onclick="frm333333.submit()" href="#"> <span class="tituloAvisoSimilar"><?php echo $nProduct; ?></span> </a>
+		<a class="avisoSimilar" onclick="frm111.submit()" href="#"> <span class="tituloAvisoSimilar"><?php echo $nProduct; ?></span> </a>
                     
-		<form action="detalles.php" method="POST" name="frm333333">
+		<form action="detalles.php" method="POST" name="frm111">
 			<input type="hidden" name="ident" value= <?php echo '"' . $iden . '"'; ?> >
 		</form> 
 						
