@@ -309,7 +309,8 @@ $cant=1;
 							
 							</div>
                 </div>
-            </div>                                
+            </div>
+
         </div>
                            
             <!--<p class="alignRight">

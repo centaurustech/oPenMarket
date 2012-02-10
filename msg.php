@@ -7,8 +7,8 @@
 			
 			<div class="formCv">
 			
-                        <div id="osx-modal-data" style="overflow: auto; height: 400px; width: 93%;">
+                        <div id="osx-modal-data" style="width:570px;height:240px;overflow:auto;">
 			</div>
 			
 			</div>
-                </div>
+		</div>
