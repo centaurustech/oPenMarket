@@ -25,9 +25,9 @@
                 
 	     <title>
 	     
-<?php
+<?php	
 
-	$consult1='select compania.name,compania.rif,compania.dir,compania.keywords,users.fname,users.sname,users.dni from compania,users where users.id="' . $_COOKIE['pass'] . '"';	 
+	$consult1='select users.fname,users.sname,users.dni from users where id="' . $_COOKIE['pass'] . '"';	 
 
 	require_once(dirname(__FILE__).'/../../../usr/share/yii/framework/yii.php');
 	defined('YII_DEBUG') or define('YII_DEBUG',true);
@@ -35,13 +35,9 @@
 	$cnx = new CDbConnection('mysql:host=localhost;dbname=productAdmin', 'userdb', 'db5e65fb2af18937f7b24b787949866522a0c04f30b21fc9a8dd2979d6e1b866');
 	$cnx->active = true;
 	$dat = $cnx->createCommand($consult1)->query();
-	$dat->bindColumn(1, $nCom);
-	$dat->bindColumn(2, $RIF);	
-	$dat->bindColumn(3, $dir);
-	$dat->bindColumn(4, $keywords);
-	$dat->bindColumn(6, $Snam);
-	$dat->bindColumn(5, $Pnam);
-	$dat->bindColumn(7, $dni);
+	$dat->bindColumn(1, $Snam);
+	$dat->bindColumn(2, $Pnam);
+	$dat->bindColumn(3, $dni);
 							
 	$dat->read();
 	
@@ -50,6 +46,15 @@
 
 		else
 		$Nusr= $Pnam . " " . $Snam;
+		
+	$consult1="select compania.name,compania.rif,compania.dir,compania.keywords from compania";
+	
+	$dat = $cnx->createCommand($consult1)->query();
+	$dat->bindColumn(1, $nCom);
+	$dat->bindColumn(2, $RIF);	
+	$dat->bindColumn(3, $dir);
+	$dat->bindColumn(4, $keywords);
+	$dat->read();
 	
 	echo $nCom;
 
@@ -174,7 +179,7 @@ echo '<td style="align:center" id="JtDir" align="left" width="2%"><b>Dirección:
 			echo $_GET['flag'];
 			
 				else
-				echo "No disponible";
+				echo " No disponible";
 
 
 ?>

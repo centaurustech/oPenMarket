@@ -54,8 +54,8 @@ var every=0;
     	{
     		
     		every=every+cant*price;
-    		$('#muestra').html("Cuentas con un total de" + every + " BsF");    		    		
-    		$('#Jtabla').append('<tr class="odd gradeB"><td>' + nam + '</td><td class="center">' + cant + '</td><td class="center">15.1%</td><td class="center">12.5%</td><td>'+ price + '</td><td>' + price*cant + '</td></tr>');
+    		$('#muestra').html("Cuentas con un total de " + every + " BsF");    		    		    		
+    		$('#"example"').dataTable().fnAddData([nam,cant, "15.1%", "12.5%", price, price*cant]);
     		
     	return true;
     	}	     	
