@@ -148,6 +148,7 @@ $(document).ready(function()
 	
 		else
 		{
+			echo "'";
 			echo "onclick=\"javascript:msg('" . $nomb . "'," . $price . "," . $_POST['ident'] . "," . 1 . ")\"";
 		}
 						

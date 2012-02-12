@@ -280,18 +280,18 @@ function checkout()
 	if($('#Jpago').val()==3)
 	{				
 	
-		if($('#Ppago').val().indexOf('@')==-1 || $('#Ppago').val().indexOf('.')==-1)
-		{							
+		if($('#JserialTarj').val().indexOf('@')==-1 || $('#JserialTarj').val().indexOf('.')==-1)
+		{										
 			$('#Dpago').removeClass('oculto');		
-			$('#Dpago').text('Verifique su cuenta Paypal sea valida');
+			$('#Dpago').text('Verifique que su cuenta Paypal sea valida');
 		
 		enviar++;
-		}								
-	}
-	
-	else
-	{
-		$('#Dpago').addClass('oculto');
+		}
+		
+				else
+				{
+					$('#Dpago').addClass('oculto');
+				}								
 	}	
 	
 	if($('#Jpago').val()==3 && $('#JserialTarj').val().length<6)

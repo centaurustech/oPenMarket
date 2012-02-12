@@ -154,7 +154,7 @@ $(document).ready(function()
 						
 	?>                    
                     
-                     > <span> Comprar articulo</span></a>                    
+                     > <span> Agregar al carrito</span></a>                    
                 </div>
             
         </div>
