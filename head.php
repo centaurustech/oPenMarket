@@ -53,7 +53,12 @@ var every=0;
     	if(window.location.href.indexOf("fact.php?param=100")>0)
     	{
     		
-    		every=every+cant*price;
+    		tmp=cant*parseFloat(price);
+    		tmp=parseFloat(tmp) + parseFloat(price) * parseFloat(12.5) / 100;
+    		tmp=parseFloat(tmp) * parseFloat(15.1) / 100;
+    		    		
+    		every=parseFloat(every) + cant * parseFloat(price) - parseFloat(tmp);
+    		every=every.toFixed(2);
     		$('#muestra').html("Cuentas con un total de " + every + " BsF");    		    		    		
     		$('#example').dataTable().fnAddData([nam,cant, "15.1%", "12.5%", price, price*cant]);
     		
