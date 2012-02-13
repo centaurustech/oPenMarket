@@ -284,7 +284,7 @@ echo '<td style="align:center" id="JtDir" align="left" width="2%"><b>Dirección:
 			echo '<td class="center">' . $Pdsc . "%</td>";		
 			echo '<td class="center">' . $Piva . "%</td>";
 			echo '<td>' . $Pprice . "</td>";
-			echo '<td>' . ($Pprice - ($Pprice * $Pcant) * $Pdsc / 100) + ($Pprice + ($Pprice * $Pcant) * $Piva / 100) . '</td>';
+			echo '<td>' . ($Pprice - ($Pprice * $Pcant) * $Pdsc / 100) . '</td>';
 			echo '</tr>';
 		}
 	}
@@ -317,8 +317,10 @@ echo '<td style="align:center" id="JtDir" align="left" width="2%"><b>Dirección:
 			echo '<td class="center">' . $cont . "</td>";
 			echo '<td class="center">' . $Pdsc . "%</td>";		
 			echo '<td class="center">' . $Piva . "%</td>";
-			echo '<td>' . $Pprice . "</td>";
-			echo '<td>' . "jajaj" . '</td>';
+			echo '<td>' . $Pprice . "</td>";			
+			$Pprice=$Pprice + ($Pprice * $cont) * $Piva / 100;
+			$Pprice=$Pprice - ($Pprice * $cont) * $Pdsc / 100;
+			echo '<td>' . $Pprice . '</td>';
 			echo '</tr>';					 			
 		}	
 	}

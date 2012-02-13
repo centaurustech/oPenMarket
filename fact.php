@@ -318,7 +318,9 @@ echo '<td style="align:center" id="JtDir" align="left" width="2%"><b>Dirección:
 			echo '<td class="center">' . $Pdsc . "%</td>";		
 			echo '<td class="center">' . $Piva . "%</td>";
 			echo '<td>' . $Pprice . "</td>";
-			echo '<td>' . "jajaj" . '</td>';
+			$Pprice=$Pprice - ($Pprice * $cont) * $Pdsc / 100;			
+			$Pprice=$Pprice + ($Pprice * $cont) * $Piva / 100;
+			echo '<td>' . $Pprice . '</td>';
 			echo '</tr>';					 			
 		}	
 	}
