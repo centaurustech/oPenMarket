@@ -57,7 +57,7 @@ var every=0;
     		tmp=parseFloat(tmp) + parseFloat(price) * parseFloat(12.5) / 100;
     		tmp=parseFloat(tmp) * parseFloat(15.1) / 100;
     		    		
-    		every=parseFloat(every) + cant * parseFloat(price) + parseFloat(tmp);
+    		every=parseFloat(every) + cant * parseFloat(price) - parseFloat(tmp);
     		every=every.toFixed(2);
     		$('#muestra').html("Cuentas con un total de " + every + " BsF");    		    		    		
     		$('#example').dataTable().fnAddData([nam,cant, "15.1%", "12.5%", price, price*cant]);
@@ -205,7 +205,7 @@ function consulta(typ)
 						$('#infobox').addClass("warningbox");
 						$('#infobox').hide();
 						$('#infobox').fadeIn(2000);
-						$('#infobox').fadeOut(2000);
+						$('#infobox').fadeOut(5000);
 						$('#btnVerMasAvisos').addClass("oculto");							
 					}						
 			}															
@@ -322,7 +322,10 @@ function consulta(typ)
 			if($.cookie('prodCant')!=null && $.cookie('prodCant')>0)
 			{
 				//$('#btnVOID').removeClass("oculto");
-				$('#LIsale').removeClass("oculto");
+				$('#LIsale').removeClass("oculto");				
+				$('#ultimo0').removeClass("oculto");
+				$('#ulitimo1').removeClass("oculto");
+				$('#ultimo2').removeClass("oculto");
 			}					
 		}
 		

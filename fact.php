@@ -284,7 +284,7 @@ echo '<td style="align:center" id="JtDir" align="left" width="2%"><b>Dirección:
 			echo '<td class="center">' . $Pdsc . "%</td>";		
 			echo '<td class="center">' . $Piva . "%</td>";
 			echo '<td>' . $Pprice . "</td>";
-			echo '<td>' . $Pprice * $cont . '</td>';
+			echo '<td>' . ($Pprice - ($Pprice * $Pcant) * $Pdsc / 100) . '</td>';
 			echo '</tr>';
 		}
 	}

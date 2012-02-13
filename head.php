@@ -48,7 +48,13 @@ var every=0;
     { 
         	
     	$('#LIsale').removeClass('oculto');
-    	//$('#btnVOID').removeClass('oculto');    	
+    	
+				$('#ultimo0').removeClass("oculto");
+				$('#ultimo1').removeClass("oculto");
+				$('#ultimo2').removeClass("oculto");
+				    	
+    	//$('#btnVOID').removeClass('oculto');
+    	    	
     	
     	if(window.location.href.indexOf("fact.php?param=100")>0)
     	{
@@ -205,7 +211,7 @@ function consulta(typ)
 						$('#infobox').addClass("warningbox");
 						$('#infobox').hide();
 						$('#infobox').fadeIn(2000);
-						$('#infobox').fadeOut(2000);
+						$('#infobox').fadeOut(5000);
 						$('#btnVerMasAvisos').addClass("oculto");							
 					}						
 			}															
@@ -322,7 +328,10 @@ function consulta(typ)
 			if($.cookie('prodCant')!=null && $.cookie('prodCant')>0)
 			{
 				//$('#btnVOID').removeClass("oculto");
-				$('#LIsale').removeClass("oculto");
+				$('#LIsale').removeClass("oculto");				
+				$('#ultimo0').removeClass("oculto");
+				$('#ultimo1').removeClass("oculto");
+				$('#ultimo2').removeClass("oculto");
 			}					
 		}
 		
