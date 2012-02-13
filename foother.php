@@ -4,7 +4,7 @@
 
 			<a href="#">
 				<h5>Los Mejores precios en...</h5>
-				<div id="ProductosxD">Antigripales, genericos, pastillas, ampollas, </div>				
+				<div id="ProductosxD">Antigripales, genericos, pastillas, ampollas </div>				
 			</a>			
 			
 			<!--<a href="http://quotesondesign.com">

@@ -33,7 +33,18 @@
         <meta name="keywords" content= <?php echo '"' . $keywords . '"' ?> >
         <meta name="description" content="medicamentos puerto la cruz">
         
-<?php include "head.php" ?>        
+<?php include "head.php" ?>
+
+<script>
+
+$(document).ready(function()
+{
+	
+	$('#dock').attr("style", "float:center;");
+	
+});
+
+</script>        
         
 </head>
 

@@ -48,7 +48,9 @@ var every=0;
     { 
         	
     	$('#LIsale').removeClass('oculto');
-    	//$('#btnVOID').removeClass('oculto');    	
+				    	
+    	//$('#btnVOID').removeClass('oculto');
+    	    	
     	
     	if(window.location.href.indexOf("fact.php?param=100")>0)
     	{
@@ -175,7 +177,10 @@ function consulta(typ)
 						$('#Pprd' + indx).html("Precio " + data[indx].price + " BsF");
 										
 						if($.cookie('pass')!=null && $.cookie('mail')!=null)
-						$('#Lprd' + indx).attr("href", "javascript:msg('" + data[indx].name + "'," + data[indx].price  + "," + data[indx].id + ",1)");
+						{
+							$('#Lprd' + indx).attr("href", "javascript:msg('" + data[indx].name + "'," + data[indx].price  + "," + data[indx].id + ",1)");
+							$('#ultimo' + indx).attr("onclick=", "javascript:msg('" + data[indx].name + "'," + data[indx].price  + "," + data[indx].id + ",1)");
+						}
 					
 							else
 							$('#Lprd' + indx).attr("href", "#");
@@ -322,10 +327,7 @@ function consulta(typ)
 			if($.cookie('prodCant')!=null && $.cookie('prodCant')>0)
 			{
 				//$('#btnVOID').removeClass("oculto");
-				$('#LIsale').removeClass("oculto");				
-				$('#ultimo0').removeClass("oculto");
-				$('#ulitimo1').removeClass("oculto");
-				$('#ultimo2').removeClass("oculto");
+				$('#LIsale').removeClass("oculto");
 			}					
 		}
 		

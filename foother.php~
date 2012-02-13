@@ -2,9 +2,9 @@
 
 		<section class="slide-up-boxes">
 
-			<a href="http://wufoo.com">
+			<a href="#">
 				<h5>Los Mejores precios en...</h5>
-				<div>asdsadasdasdasdada</div>				
+				<div id="ProductosxD">Antigripales, genericos, pastillas, ampollas, </div>				
 			</a>			
 			
 			<!--<a href="http://quotesondesign.com">
@@ -20,12 +20,12 @@
 		
 		<section class="slide-up-boxes">
 		
-			<a class="oculto" href="http://wufoo.com">
+			<a class="oculto" href="#">
 				<h5>sdasdasd</h5>
 				<div>asdsadasdasdasdada</div>				
 			</a>
 					
-			<a href="http://digwp.com">
+			<a href="#">
 				<h5>Descuentos especiales...</h5>
 				<div>Para hospitales, compras al mayor, empresas del estado y muchas más..</div>				
 			</a>
@@ -44,9 +44,14 @@
         </div>
         <div class="grid_12">
             <p class="alignCenter" id="alignCenter">
-                        <i>Nos esforzamos para ofrecerle Precios y Servicios Excelentes.<br>Si no encuentra un producto en el catálogo, pídanoslo por e-mail</i><br><br>
-            <?php echo $nCom . " " . $dir . " " . $RIF ?>
-            <br>CopyLeft 2011-2012 oPenMarket - Liberado bajo licencia GPLv3</p>            
+
+            <ul id="ticker01" style="text-align:center; color:#25A3E1;">
+            <li><i>Nos esforzamos para ofrecerle Precios y Servicios Excelentes.</i></li>
+            <li> Si no encuentra un producto en el catálogo, pídanoslo por e-mail</li>
+            </ul>
+
+            <?php echo "<p style='text-align:center'>" . $nCom . " " . $dir . " " . $RIF . "<br> CopyLeft 2011-2012 oPenMarket - Liberado bajo licencia GPLv3</p>" ?>
+
         </div>
     </div>
 </div>
