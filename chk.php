@@ -20,7 +20,7 @@ function register_sale($verb)
 	$san->sanitizeCookie = true;
 		
 	if(isset($_POST['where']) || isset($_POST['code']))
-	$cnx=new CDbConnection('mysql:host=localhost;dbname=world', 'userdb', 'db5e65fb2af18937f7b24b787949866522a0c04f30b21fc9a8dd2979d6b866');
+	$cnx=new CDbConnection('mysql:host=localhost;dbname=world', 'userdb', 'db5e65fb2af18937f7b24b787949866522a0c04f30b21fc9a8dd2979d6e1b866');
 
 		else
 		$cnx = new CDbConnection('mysql:host=localhost;dbname=productAdmin', 'userdb', 'db5e65fb2af18937f7b24b787949866522a0c04f30b21fc9a8dd2979d6e1b866');
