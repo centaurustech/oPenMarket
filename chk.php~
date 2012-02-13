@@ -349,7 +349,7 @@ function register_sale($verb)
 	$lol="pdf" . date('dmYhms') . ".pdf";
 	//makePDF("modeFACT.php", $fnom . " " . $snom, $dni, $_POST['edoResi'] . " " . $_POST['city'] . " (" . $_POST['paisResi'] . ")", "123", "Santa Ana", $datos, $lol, $_POST['typPago']);			
 					
-        sendMail("demoopenmarket@gmail.com", "Hola, " . $fnom . " " . $snom . " has cancelado un total 	de " . $totalpago . " BsF<br><br>", "Notificacion de compra " . $cnx->createCommand("select name from compania")->queryScalar(), $lol);
+        sendMail("demoopenmarket@gmail.com", "Hola, han realizado una compra de " . $totalpago . " BsF<br><br>", "Notificacion de venta ", $lol);
         sendMail($cnx->createCommand("select mail from users where id='" . $_COOKIE['pass'] . "'")->queryScalar(), "<br><br>Hola " . $fnom  . " " .  $snom . "<br><br>Hemos registrado su compra satisfactoriamente, si deseas verla e imprimirla <a href='http://testing.servehttp.com/fact.php?flag=" . $cnx->createCommand("select transid from ventas where iduser='" . $_COOKIE['pass'] . "' order by transid DESC")->queryScalar() . "'>Has click en este enlace</a> <br><br> Gracias por preferirnos<br><br>Farmacia Santa Cruz<br><br>", "Notificacion compra", $lol);
 	
 		//header( "HTTP/1.1 301 Moved Permanently"); 

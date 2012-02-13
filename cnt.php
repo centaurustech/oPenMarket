@@ -152,9 +152,9 @@ $(document).ready(function()
                     <ul class="cvPendingActions">
                     	
                     	<!--<li class=""><a class="recomendaciones" id="empleo_actual" href="formu.php">Editar tu informacion</a>
-                    	</li>
+                    	</li>-->
                     	
-                    	<li class="recomendaciones" onclick="javascript:window.print()"><a href="#">Imprimir formulario</a></li>-->                    	                    	
+                    	<li class="recomendaciones" onclick="javascript:window.print()"><a href="#">Imprimir este formulario</a></li>                    	                    	
                     	
                     </ul>
                     
@@ -172,7 +172,7 @@ $(document).ready(function()
 ?>	
 	
 	</p>
-	<p class="yoConseguiDetalle"><img src="img/cesta.png" hspace="2px" align="left">Es el total de tus compras en <b><?php echo $nCom; ?> </b><br><br><a href="#">Ver historial de compras</a></p>
+	<p class="yoConseguiDetalle"><img src="img/cesta.png" hspace="2px" align="left">Es el total de tus compras en <b><?php echo $nCom; ?> </b><br><br><!--<a href="#">Ver historial de compras</a></p>-->
     </div>
 </div>
 

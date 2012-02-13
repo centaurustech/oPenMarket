@@ -72,10 +72,9 @@ $(document).ready(function()
 	$dat=$cnx->createCommand('select ventas.fcompra,ventas.totalcmp,ventas.typPago,ventas.transid from ventas where iduser="' . $_COOKIE['pass'] . '" order by ventas.transid desc')->query();
 
 	$dat->bindColumn(1, $fech);
-	$dat->bindColumn(2, $pais);
-	$dat->bindColumn(3, $total);
-	$dat->bindColumn(4, $tyPag);
-	$dat->bindColumn(5, $tranID);
+	$dat->bindColumn(2, $total);
+	$dat->bindColumn(3, $tyPag);
+	$dat->bindColumn(4, $tranID);
 	$dat->read();
 
 	if($dat->rowCount)
@@ -153,9 +152,9 @@ $(document).ready(function()
                     <ul class="cvPendingActions">
                     	
                     	<!--<li class=""><a class="recomendaciones" id="empleo_actual" href="formu.php">Editar tu informacion</a>
-                    	</li>
+                    	</li>-->
                     	
-                    	<li class="recomendaciones" onclick="javascript:window.print()"><a href="#">Imprimir formulario</a></li>-->                    	                    	
+                    	<li class="recomendaciones" onclick="javascript:window.print()"><a href="#">Imprimir formulario</a></li>                    	                    	
                     	
                     </ul>
                     
@@ -173,7 +172,7 @@ $(document).ready(function()
 ?>	
 	
 	</p>
-	<p class="yoConseguiDetalle"><img src="img/cesta.png" hspace="2px" align="left">Es el total de tus compras en <b><?php echo $nCom; ?> </b><br><br><a href="#">Ver historial de compras</a></p>
+	<p class="yoConseguiDetalle"><img src="img/cesta.png" hspace="2px" align="left">Es el total de tus compras en <b><?php echo $nCom; ?> </b><br><br><!--<a href="#">Ver historial de compras</a></p>-->
     </div>
 </div>
 

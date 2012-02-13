@@ -144,13 +144,14 @@
                </select>
                
                <select name="anoTarj" id="anoTarj" class="fechaNacimientoAno">
-               		<option value="1993">2018</option>
-               		<option value="1993">2017</option>
                      <option value="1993">2016</option>
 							<option value="1993">2015</option>               
-               		<option value="1993">2014</option>
-               		<option value="1993">2013</option>                              
-   						<option value="1993">2012</option>   								   									
+
+               		<option value="1993">2004</option>
+               		<option value="1993">2003</option>                              
+   						<option value="1993">2002</option>   								
+   						<option value="1992">2001</option>   								
+   						<option value="1991">2000</option>   								   									
    								 
                </select>					
 					
