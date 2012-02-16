@@ -383,7 +383,7 @@ function sendMail($mailo, $txt, $subject, $fich)
 	$mail->Subject = $subject;
 	$mail->MsgHTML($txt);	
 	$mail->AddAddress($mailo, 'Compras Usuarios');
-        //$mail->AddAttachment($fich, 'Factura.pdf');
+   //$mail->AddAttachment($fich, 'Factura.pdf');
 	$mail->Send();
 }
 
@@ -400,29 +400,7 @@ function makePDF($dir, $name, $dni, $localize, $facID, $nCom, $data, $output, $t
    $Fpdf->WriteHTML($cuerpo);
    $Fpdf->Output($output, "FI");
 
-}                
-
-					/*
-					
-                <td style="width: 50%; text-align: left; border: solid 1px">
-						textoooooo
-                </td>
-                <td style="width: 15%; text-align: center; border: solid 1px">
-						cuaaaas
-                </td>
-                <td style="width: 15%; text-align: center; border: solid 1px">
-						cuaaaas
-                </td>                
-                <td style="width: 15%; text-align: center; border: solid 1px">
-						cuaaaas
-                </td>
-                <td style="width: 15%; text-align: right; border: solid 1px">
-						cuaaaas
-                </td>
-
-						register_sale(0);                
-                
-                */
+}
 
 register_sale(0);
 ?>

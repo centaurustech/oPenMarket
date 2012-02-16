@@ -133,11 +133,10 @@
         </div>
         </div>
 
-                <div style="margin-top:-2%; margin-right:10%" id="social">
+                <div style="margin-top:1%; margin-right:10%" id="social">
                 <p><i>Compartelo en tus redes sociales..</i></p>
 
         <a href="http://www.facebook.com/sharer.php?u=http://testing.servehttp.com/" title="Compartir en Facebook" class="fade facebook" target="_blank"><span>facebook</span></a>
-        <!--<a href="#" class="fade googleplus" target="_blank"><span>googleplus</span></a>-->
         <a href="http://twitter.com/home?status=Visita+http://testing.servehttp.com/" title="" class="fade twitter" target="_blank"><span>twitter</span></a>
 
                 </div>

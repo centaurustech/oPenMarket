@@ -331,11 +331,15 @@ function checkout()
 	e=0;
 
 	while(e<=2)
-	{
-		if($('#J' + e).val().length==0 || isChar($('#J' + e).val())==false)
+	{			
+		
+		if($('#J' + e).val().toLowerCase().indexOf('ñ')==-1 && $('#J' + e).val().toLowerCase().indexOf('z')==-1 || $('#J' + e).val().length==0)
 		{
-			$('#D' + e).text('Verifique que el campo sea mayor a 5 caracteres y contenga solo letras');
-			$('#D' + e).removeClass('oculto');
+			if(isChar($('#J' + e).val())==false)
+			{
+				$('#D' + e).text('Verifique que el campo sea mayor a 5 caracteres y contenga solo letras');
+				$('#D' + e).removeClass('oculto');
+			}
 			
 		enviar++;
 		}
