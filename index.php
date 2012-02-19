@@ -189,7 +189,7 @@ $cant=1;
             <div id="Gprd1" class="roundBox avisoHome oculto">
             
 					<a href="detalles.php">
-                <img class="logoEmpresaAviso" src="img/novartis.jpg" height="95" width="150">
+                <img class="logoEmpresaAviso" id="Pimg1" src="" height="95" width="150">
                 </a>
                 
                 <div class="datosAvisoHome">
@@ -253,7 +253,7 @@ $cant=1;
             <div id="Gprd2" class="roundBox avisoHome oculto">
             
                 <a href="detalles.php">
-                <img class="logoEmpresaAviso" src="img/ibuprofeno.jpg" height="95" width="150">
+                <img class="logoEmpresaAviso" id="Pimg2" src="" height="95" width="150">
                 </a>
                 
                 <div class="datosAvisoHome">

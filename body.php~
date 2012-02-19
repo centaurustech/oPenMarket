@@ -175,7 +175,7 @@
         if(isset($_COOKIE['pass']) && isset($_COOKIE['mail']))
         {        
         	
-        if(strlen(strstr($_SERVER['REQUEST_URI'], "index.php"))>0)
+        if(strlen(strstr($_SERVER['REQUEST_URI'], "index.php"))==0)
         include "fnd.php";
             
         echo '<ul id="navigation">

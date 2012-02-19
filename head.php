@@ -58,15 +58,13 @@ var every=0;
     	
     	if(window.location.href.indexOf("fact.php?param=100")>0)
     	{
-    		
-    		tmp=cant*parseFloat(price);
-    		tmp=parseFloat(tmp) + parseFloat(price) * parseFloat(12.5) / 100;
-    		tmp=parseFloat(tmp) * parseFloat(15.1) / 100;
+
+			tmp=price*cant - (price*cant * 15.1 /100) + (price*cant * 12.5 /100)    		
     		    		
-    		every=parseFloat(every) + cant * parseFloat(price) - parseFloat(tmp);
+    		every=parseFloat(every) + parseFloat(tmp);
     		every=every.toFixed(2);
     		$('#muestra').html("Cuentas con un total de " + every + " BsF");    		    		    		
-    		$('#example').dataTable().fnAddData([nam,cant, "15.1%", "12.5%", price, price*cant]);
+    		$('#example').dataTable().fnAddData([nam,cant, "15.1%", "12.5%", price,  tmp]);
     		
     	return true;
     	}	     	
@@ -178,6 +176,7 @@ function consulta(typ)
 										
 						$('#Nprd' + indx).html(data[indx].name);
 						$('#Dprd' + indx).html(data[indx].details);
+						$('#Pimg' + indx).attr("src", data[indx].pathimg);
 						$('#Pprd' + indx).html("Precio " + data[indx].price + " BsF");
 										
 						if($.cookie('pass')!=null && $.cookie('mail')!=null)
