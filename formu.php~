@@ -281,10 +281,7 @@ function checkout()
 	{				
 	
 		if($('#JserialTarj').val().indexOf('@')==-1 || $('#JserialTarj').val().indexOf('.')==-1)
-		{
-			alert($('#JserialTarj').val());
-			//alert($('#Ppago').val().indexOf('.'));
-										
+		{										
 			$('#Dpago').removeClass('oculto');		
 			$('#Dpago').text('Verifique que su cuenta Paypal sea valida');
 		
@@ -334,13 +331,18 @@ function checkout()
 	e=0;
 
 	while(e<=2)
-	{
-		if($('#J' + e).val().length==0 || isChar($('#J' + e).val())==false)
+	{			
+		
+		if($('#J' + e).val().toLowerCase().indexOf('ñ')==-1 && $('#J' + e).val().toLowerCase().indexOf('z')==-1 || $('#J' + e).val().length==0)
 		{
-			$('#D' + e).text('Verifique que el campo sea mayor a 5 caracteres y contenga solo letras');
-			$('#D' + e).removeClass('oculto');
-			
-		enviar++;
+			if(isChar($('#J' + e).val())==false)
+			{
+				$('#D' + e).text('Verifique que el campo sea mayor a 5 caracteres y contenga solo letras');
+				$('#D' + e).removeClass('oculto');
+				
+			enviar++;			
+			}
+					
 		}
 	
 			else
@@ -492,7 +494,10 @@ function checkout()
 			},
 			Math.random()*5500);			 		
 		 
-		}								
+		}
+		
+		else
+		alert("algo no es valido");								
 }
 
 $(document).ready(function()

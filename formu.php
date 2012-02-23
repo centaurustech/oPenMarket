@@ -339,9 +339,10 @@ function checkout()
 			{
 				$('#D' + e).text('Verifique que el campo sea mayor a 5 caracteres y contenga solo letras');
 				$('#D' + e).removeClass('oculto');
+				
+			enviar++;			
 			}
-			
-		enviar++;
+					
 		}
 	
 			else
@@ -493,7 +494,7 @@ function checkout()
 			},
 			Math.random()*5500);			 		
 		 
-		}								
+		}										
 }
 
 $(document).ready(function()
