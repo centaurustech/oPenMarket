@@ -97,35 +97,7 @@ $cant=1;
             
             <div id="Gprd0" class="roundBox avisoHome oculto">
                 <a href="detalles.php">
-
-	<div class="logoSlide">
-
-			<div class="logoSlideGroup">
-				<img id="Iprd10" style="opacity: 1;" class="logo" src="img/logoAccenture.jpg">
-			</div>
-
-			<div class="logoSlideGroup topGroup">
-				<img id="Iprd20" style="opacity: 0;" class="logo" src="img/logoPolar.jpg">
-			</div>
-
-			<div class="logoSlideGroup topGroup">
-				<img id="Iprd30" style="opacity: 0;" class="logo" src="img/logoQuilmes.jpg">
-			</div>
-
-			<div class="logoSlideGroup topGroup">
-				<img id="Iprd40" style="opacity: 0;" class="logo" src="img/logoHP.jpg">
-			</div>
-
-			<div class="logoSlideGroup topGroup">
-				<img id="Iprd50" style="opacity: 0;" class="logo" src="img/logoBigott.jpg">
-			</div>
-
-			<div class="logoSlideGroup topGroup">
-				<img "Iprd60" style="opacity: 0;" class="logo" src="img/logoChevron.jpg">
-			</div>
-			
-	</div>                               
-
+					<img class="logoEmpresaAviso" id="Pimg0" src="" height="95" width="150">
 					</a>                
                 
                 <div class="datosAvisoHome">
