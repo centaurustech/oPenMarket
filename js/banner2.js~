@@ -15,7 +15,8 @@ $.ajax(
 	{
 		$.each(data, function(indx, vlr)
 		{
-			plop[indx]=data[indx].name;						
+			plop[indx]=data[indx].name;
+			alert(plop[indx]);						
 		});
 	}
 	

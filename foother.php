@@ -1,4 +1,4 @@
-	<div id="page-wrap">
+	<div id="page-wrap"align="left">
 
 		<section class="slide-up-boxes">
 
@@ -16,13 +16,13 @@
 			
 	</div>
 	
-	<div id="page-wrap">			
+	<div id="page-wrap" align="right">			
 		
 		<section class="slide-up-boxes">
 		
 			<a class="oculto" href="#">
-				<h5>sdasdasd</h5>
-				<div>asdsadasdasdasdada</div>				
+				<h5></h5>
+				<div></div>				
 			</a>
 					
 			<a href="#">

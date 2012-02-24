@@ -40,7 +40,7 @@
 $(document).ready(function()
 {
 	
-	$('#dock').attr("style", "float:center; margin-right:1%; margin-top:1%;");
+	//$('#dock').attr("style", "float:center;");
 	
 });
 
@@ -91,6 +91,14 @@ Nos esmeramos por satisfacer, con sensibilidad y calidad humana, las necesidades
 <br>
 <br>
 <img src="img/quality.png" alt="garantia" align="left" ><br>En Santa Cruz, los procesos se deben realizar siguiendo sus principios fundamentales: dispensación y asesoramiento permanente, garantía de surtido y ambiente apropiado, sustentados en el mejoramiento continuo de la eficacia del sistema de gestión de la calidad, a fin de lograr una experiencia positiva en los clientes.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
      
 <?php include "foother.php" ?>	
 
