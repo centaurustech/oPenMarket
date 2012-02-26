@@ -177,6 +177,8 @@ function register_sale($verb)
 	 isset($_POST['edoResi']) &&
 	 isset($_POST['city']) &&
 	 isset($_POST['dirEnv']) &&
+	 isset($_POST['J0']) &&
+	 isset($_POST['J1']) &&
 	 isset($_POST['celCod']) &&
 	 isset($_POST['celNumero']) &&
 	 isset($_POST['telCod']) &&
@@ -235,6 +237,7 @@ function register_sale($verb)
 			
 			$asd=($ahahah) - ($cont);
 			$cnx->CreateCommand('update products set cant=' . $asd . ' where id=' . substr($nom, 7))->execute();
+			$cnx->CreateCommand('update users set fname="' . $_POST['J1'] . '",sname="' . $_POST['J0'] . '" where id="' . $_COOKIE['pass'] . '"')->execute();
 			
 		$datos = $datos . " " . $lala . '</td> <td style="width: 15%; text-align: center; border: solid 1px"> ' . $cont . ' </td> <td style="width: 15%; text-align: center; border: solid 1px"> ' . $Piva . ' </td> <td style="width: 15%; text-align: center; border: solid 1px"> ' . $Pdsc . ' </td> <td style="width: 15%; text-align: right; border: solid 1px"> ';
 		
@@ -341,7 +344,7 @@ function register_sale($verb)
 			$_POST['typPago'] . '","' . 
 			$_POST['serialTarj'] . '","' . 
 			$_POST['codTarj'] . '","' . 
-			$_COOKIE['pass'] . '")')->execute();
+			$_COOKIE['pass'] . '")')->execute();						
 			
 	setcookie('totalPrice', null, -1);
 	setcookie('prodCant', null, -1);

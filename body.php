@@ -173,9 +173,11 @@
         include "fnd.php";
         
         if(isset($_COOKIE['pass']) && isset($_COOKIE['mail']))
-        {        
+        {
         	
-        if(strlen(strstr($_SERVER['REQUEST_URI'], "index.php"))>0)
+        	//echo "pagina.. " . $_SERVER['REQUEST_URI'];         
+        	
+        if(strlen(strstr($_SERVER['REQUEST_URI'], "index.php"))>0 || $_SERVER['REQUEST_URI']=="/")
         include "fnd.php";
             
         echo '<ul id="navigation">

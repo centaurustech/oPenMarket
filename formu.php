@@ -468,7 +468,7 @@ function checkout()
 	$.ajax(
 	{
 				
-		data: "mail=" + $('#Jemail').val() + "&paisResi=" + $('#Jpais').val() + "&edoResi=" + $('#Jedo').val() + "&city=" + $('#J2').val() + "&dirEnv=" + $('#Jdir').val() + "&celCod=" + $('#J5').val() + "&celNumero=" + $('#J6').val() + "&telCod=" + $('#J3').val() + "&telNumero=" + $('#J4').val() + "&mesTarj=" + $('#JmesTarj').val() + "&anoTarj=" + $('#anoTarj').val() + "&typPago=" + $('#Jpago').val() + "&serialTarj=" + $('#JserialTarj').val() + "&codTarj=" + $('#JcodTarj').val(),
+		data: "J0=" +  $('#J0').val() + "&J1=" +  $('#J1').val() + "&mail=" + $('#Jemail').val() + "&paisResi=" + $('#Jpais').val() + "&edoResi=" + $('#Jedo').val() + "&city=" + $('#J2').val() + "&dirEnv=" + $('#Jdir').val() + "&celCod=" + $('#J5').val() + "&celNumero=" + $('#J6').val() + "&telCod=" + $('#J3').val() + "&telNumero=" + $('#J4').val() + "&mesTarj=" + $('#JmesTarj').val() + "&anoTarj=" + $('#anoTarj').val() + "&typPago=" + $('#Jpago').val() + "&serialTarj=" + $('#JserialTarj').val() + "&codTarj=" + $('#JcodTarj').val(),
 		type: "POST",
 		dataType: "json",
 		url: "chk.php",
@@ -564,3 +564,153 @@ include "sale.php";
 	include "foother.php";
 ?>
 
+<?php
+
+	require_once(dirname(__FILE__).'/../../../usr/share/yii/framework/yii.php');
+	defined('YII_DEBUG') or define('YII_DEBUG',true);
+	
+	if(isset($_COOKIE['mail'])==false || $_COOKIE['pass']==false)
+	{				
+		header( "HTTP/1.1 301 Moved Permanently");
+		header( "Location: index.php");
+				
+	return 0;						
+	}
+	
+	echo '<!DOCTYPE html>';
+	echo '<html xmlns="http://www.w3.org/1999/xhtml>"';
+	echo '<head>';	
+   echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">';
+   echo '<title>';	     	     
+	     
+
+	$cnx = new CDbConnection('mysql:host=localhost;dbname=productAdmin', 'userdb', 'db5e65fb2af18937f7b24b787949866522a0c04f30b21fc9a8dd2979d6e1b866');
+	$cnx->active = true;
+	$dat = $cnx->createCommand("select compania.name,compania.dir,compania.rif,users.fname,users.sname,users.mail,users.id,compania.keywords, users.dni from compania,users where users.id='" . $_COOKIE['pass'] . "' limit 1")->query();
+	
+	$dat->bindColumn(1, $nCom);
+	$dat->bindColumn(2, $dir);
+	$dat->bindColumn(3, $RIF);
+	$dat->bindColumn(4, $fName);
+	$dat->bindColumn(5, $sName);
+	$dat->bindColumn(6, $mail);
+	$dat->bindColumn(9, $id);
+	$dat->read();
+	
+	$dat = $cnx->createCommand("select
+	ventas.paisEnv,
+	ventas.city,
+	ventas.dirEnv,
+	ventas.codCel,
+	ventas.codNum,
+	ventas.codTel,
+	ventas.numTel,
+	ventas.codPago,
+	ventas.typPago,
+	ventas.prov,
+	ventas.extraPago
+	from ventas where ventas.iduser='" . $_COOKIE['pass'] . "' order by transid DESC limit 1")->query();	
+	$dat->bindColumn(1, $paisEnv);
+	$dat->bindColumn(2, $cityEnv);
+	$dat->bindColumn(3, $dirEnv);
+	$dat->bindColumn(4, $codCel);
+	$dat->bindColumn(5, $numCel);
+	$dat->bindColumn(6, $codTel);
+	$dat->bindColumn(7, $numTel);
+	$dat->bindColumn(8, $codTarj);
+	$dat->bindColumn(9, $numCreditCard);
+	$dat->bindColumn(10, $prov);
+	$dat->bindColumn(11, $extrapago);			
+	$dat->read();
+	
+	echo $nCom;
+
+?>
+	     
+	      - oPenMarket [ALPHA] </title>
+	     
+        <meta name="keywords" content=<?php echo $keywords; ?> >
+        <meta name="description" content="tiendas virtuales puerto la cruz">
+
+<?php
+
+include "head.php";
+
+if(isset($_GET['type']) && $_GET['type']==5)
+{
+	echo "<script type='text/javascript' src='js/jquery.simplemodal.js'></script> <script type='text/javascript' src='js/osx.js'></script>";
+}
+
+?>
+
+
+<script type="text/javascript">
+
+
+
+function guests()
+{
+	$('#osx-modal-title').html("Buscador de Productos");
+	$('#osx-modal-data').html("Esta es  una lista de los productos disponibles en nuestra tienda..<br><br>");
+	consulta(2);
+}
+
+function cerrarbox()
+{
+	$('#ventanaModal0').addClass('oculto');
+	$('#ventanaModal1').addClass('oculto');
+	
+	if(result>=0)
+	{
+		$('#asd').addClass('oculto');
+		$('#asd1').addClass('oculto');
+	}
+	
+	
+}
+
+function selectpago()
+{	
+	
+	switch(parseInt($('#Jpago').val()))
+	{
+		case 1:		
+		case 2:
+		$('#Ppago').html('<b>Numero Tarjeta:</b>');
+		$('#Ipago').attr("src", 'img/pago1.png');
+		$('#Ipago').attr("width", '32');
+		$('#Ipago').attr("height", '32');
+		$('#PcodTarj').removeClass('oculto');
+		$('#JcodTarj').removeClass('oculto');
+		$('#LTarj').removeClass('oculto');
+		$('#PTarjMes').removeClass('oculto');
+		$('#JmesTarj').removeClass('oculto');
+		$('#JTarjano').removeClass('oculto');
+		$('#anoTarj').removeClass('oculto');
+		$('#JTarimgn').removeClass('oculto');
+		$('#JTarimg0').removeClass('oculto');
+		break;
+		
+		case 3:
+		$('#Ppago').html('<b>Correo paypal:</b>');
+		$('#Ipago').attr("src", 'img/pago3.png');
+		$('#Ipago').attr("width", '32');
+		$('#Ipago').attr("height", '32');
+		$('#Ipago').removeClass('oculto');
+		$('#PcodTarj').addClass('oculto');
+		$('#JcodTarj').addClass('oculto');
+		$('#LTarj').addClass('oculto');
+		$('#PTarjMes').addClass('oculto');
+		$('#JmesTarj').addClass('oculto');
+		$('#JTarjano').addClass('oculto');
+		$('#anoTarj').addClass('oculto');
+		$('#JTarimg').removeClass('oculto');
+		$('#JTarimgn').addClass('oculto');
+		$('#JTarimg0').addClass('oculto');
+		break;		
+		
+		case 4:
+		$('#Ppago').html('<b>Numero Cuenta:</b>');
+		$('#PcodTarj').html('<b>Documento identidad:</b>');
+		$('#Ipago').removeClass('oculto');
+		$('#Ipago').attr("src", 'img/pago4.pn

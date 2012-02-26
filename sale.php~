@@ -104,7 +104,7 @@
     </div>
 
    <div id="Dgreat" class="okBox oculto">
-	<p><strong>Tu compra fue exitosa..! Verifica tu cuenta de correo <a class="irAlTolki" id="Jwebmail" onclick="window.open(this.href,'window','params');marketvoid();return false" href="#"> Ir a tu WebMail →</a></strong></p>
+	<p><strong>Tu compra fue exitosa..! Verifica tu cuenta de correo <a class="irAlTolki" id="Jwebmail" onclick="window.open(this.href,'window','params');return false" href="#"> Ir a tu WebMail →</a></strong></p>
    </div>
    
 <div id="ventanaModal0"class="ventanaModalOver oculto"></div>
