@@ -255,7 +255,7 @@ function(data)
 		{
 			$('#noaccount').addClass("oculto");			
 			$('#okaccount').removeClass("oculto");			
-			window.location="cnt.php";
+			window.location="index.php";
 		}
 		
 			else
