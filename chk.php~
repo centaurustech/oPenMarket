@@ -107,7 +107,7 @@ function register_sale($verb)
 	return 0;		
 	}
 	
-//login	
+	//login	
 	if(isset($_POST['type'])==true && $_POST['type']=="1" && isset($_POST['mail']) && isset($_POST['pwd1']))
 	{				
 			//pwd encr			
