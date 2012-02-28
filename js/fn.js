@@ -180,7 +180,7 @@ function buscarAvisos(palabraClave)
 										{											
 										
 										if($.cookie('mail')!=null && $.cookie('pass')!=null)
-										window.location="cnt.php";
+										window.location="index.php";
 										
 											else
 											{
