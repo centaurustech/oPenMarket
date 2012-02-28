@@ -321,7 +321,8 @@ function consulta(typ)
 			{																						
 				$.cookie('mail', null);
 				$.cookie('pass', null);
-				marketvoid();											
+				marketvoid();
+				window.location="index.php";											
 			}
 			
 			if($.cookie('prodCant')!=null && $.cookie('prodCant')>0)

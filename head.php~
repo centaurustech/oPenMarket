@@ -176,7 +176,7 @@ function consulta(typ)
 										
 						$('#Nprd' + indx).html(data[indx].name);
 						$('#Dprd' + indx).html(data[indx].details);
-						$('#Pimg' + indx).html(data[indx].pathimg);
+						$('#Pimg' + indx).attr("src", data[indx].pathimg);
 						$('#Pprd' + indx).html("Precio " + data[indx].price + " BsF");
 										
 						if($.cookie('pass')!=null && $.cookie('mail')!=null)
@@ -321,7 +321,8 @@ function consulta(typ)
 			{																						
 				$.cookie('mail', null);
 				$.cookie('pass', null);
-				marketvoid();											
+				marketvoid();
+				window.location="index.php";											
 			}
 			
 			if($.cookie('prodCant')!=null && $.cookie('prodCant')>0)

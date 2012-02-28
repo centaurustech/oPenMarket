@@ -448,10 +448,10 @@ function checkout()
 			youaccount=parseFloat(Math.floor(Math.random()*100000001));
 			
 			result= youaccount - parseFloat($.cookie('totalPrice'));
-			cap="Hola, " + $('#J0').val() + " dispones de " + youaccount + " BsF en tu cuenta tienes " + $.cookie('totalPrice') + " en tus compras, la operacion ";
+			cap="Hola, " + $('#J0').val() + " dispones de " + youaccount + " BsF en tu cuenta, tienes " + $.cookie('totalPrice') + " en tus compras y la operacion ";
 			
 			if(result>=0)
-			cap=cap+" a sido validada";
+			cap=cap+" ha sido validada";
 			
 				else
 				cap=cap+" no a podido realizarse por falta de credito";
