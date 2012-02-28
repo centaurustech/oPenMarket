@@ -107,22 +107,7 @@ function register_sale($verb)
 	return 0;		
 	}
 	
-	//users register
-	if(isset($_POST['ced'])==true && is_nan($_POST['ced'])==false  && isset($_POST['pwd2'])==true && isset($_POST['pwd1'])==true && strstr($_POST['pwd2'],  $_POST['pwd1']))
-	{
-	$var0=hash('haval160,4',$_POST['ced'], false);
-		
-								
-		if($cnx->CreateCommand('select mail from users where mail="' . $_POST['mail'] . '"')->queryScalar()==false && $cnx->CreateCommand("insert into users values('" . $var0  ."',null,null,'" . $var1 . "','" . $_POST['mail'] . "', now(), '" . $_SERVER['HTTP_USER_AGENT'] . "'," . $_POST['ced'] . ")")->execute())
-		{
-			setcookie("mail", hash('md5', $_POST['pwd1'], false) . hash('sha256', $_POST['mail'], false));	
-			setcookie("pass", $var0);			
-		}
-			
-	return 0;
-	}					
-	
-	//login	
+//login	
 	if(isset($_POST['type'])==true && $_POST['type']=="1" && isset($_POST['mail']) && isset($_POST['pwd1']))
 	{				
 			//pwd encr			
@@ -138,7 +123,22 @@ function register_sale($verb)
 				
 			return 0;				
 			}				 	
-	}
+	}	
+	
+	//users register
+	if(isset($_POST['ced'])==true && is_nan($_POST['ced'])==false  && isset($_POST['pwd2'])==true && isset($_POST['pwd1'])==true && strstr($_POST['pwd2'],  $_POST['pwd1']))
+	{
+	$var0=hash('haval160,4',$_POST['ced'], false);
+		
+								
+		if($cnx->CreateCommand('select mail from users where mail="' . $_POST['mail'] . '"')->queryScalar()==false && $cnx->CreateCommand("insert into users values('" . $var0  ."',null,null,'" . $var1 . "','" . $_POST['mail'] . "', now(), '" . $_SERVER['HTTP_USER_AGENT'] . "'," . $_POST['ced'] . ")")->execute())
+		{
+			setcookie("mail", hash('md5', $_POST['pwd1'], false) . hash('sha256', $_POST['mail'], false));	
+			setcookie("pass", $var0);			
+		}
+			
+	return 0;
+	}							
 				
 	//formu.php riddick
 	if(isset($_POST['riddick'])==true && isset($_COOKIE['pass'])==true && isset($_COOKIE['mail'])==true && strlen($_COOKIE['mail'])>5 && strlen($_COOKIE['pass'])>5)
@@ -352,7 +352,7 @@ function register_sale($verb)
 	$lol="pdf" . date('dmYhms') . ".pdf";
 	//makePDF("modeFACT.php", $fnom . " " . $snom, $dni, $_POST['edoResi'] . " " . $_POST['city'] . " (" . $_POST['paisResi'] . ")", "123", "Santa Ana", $datos, $lol, $_POST['typPago']);			
 					
-        sendMail("demoopenmarket@gmail.com", "Hola, han realizado una compra de " . $totalpago . " BsF<br><br>Si desea verla o imprimirla puede <a href='http://testing.servehttp.com/fact.php?flag=" . $cnx->createCommand("select transid from ventas where iduser='" . $_COOKIE['pass'] . "' order by transid DESC")->queryScalar() . "'>Has click en este enlace</a>", "Notificacion de venta ", $lol);
+        sendMail("demoopenmarket@gmail.com", "Hola, han realizado una compra de " . $totalpago . " BsF<br><br>Si desea verla o imprimirla <a href='http://testing.servehttp.com/fact.php?flag=" . $cnx->createCommand("select transid from ventas where iduser='" . $_COOKIE['pass'] . "' order by transid DESC")->queryScalar() . "'>Has click en este enlace</a>", "Notificacion de venta ", $lol);
         sendMail($cnx->createCommand("select mail from users where id='" . $_COOKIE['pass'] . "'")->queryScalar(), "<br><br>Hola " . $fnom  . " " .  $snom . "<br><br>Hemos registrado su compra satisfactoriamente, si deseas verla e imprimirla <a href='http://testing.servehttp.com/fact.php?flag=" . $cnx->createCommand("select transid from ventas where iduser='" . $_COOKIE['pass'] . "' order by transid DESC")->queryScalar() . "'>Has click en este enlace</a> <br><br> Gracias por preferirnos<br><br>Farmacia Santa Cruz<br><br>", "Notificacion compra", $lol);
 	
 		//header( "HTTP/1.1 301 Moved Permanently"); 

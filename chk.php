@@ -107,21 +107,6 @@ function register_sale($verb)
 	return 0;		
 	}
 	
-	//users register
-	if(isset($_POST['ced'])==true && is_nan($_POST['ced'])==false  && isset($_POST['pwd2'])==true && isset($_POST['pwd1'])==true && strstr($_POST['pwd2'],  $_POST['pwd1']))
-	{
-	$var0=hash('haval160,4',$_POST['ced'], false);
-		
-								
-		if($cnx->CreateCommand('select mail from users where mail="' . $_POST['mail'] . '"')->queryScalar()==false && $cnx->CreateCommand("insert into users values('" . $var0  ."',null,null,'" . $var1 . "','" . $_POST['mail'] . "', now(), '" . $_SERVER['HTTP_USER_AGENT'] . "'," . $_POST['ced'] . ")")->execute())
-		{
-			setcookie("mail", hash('md5', $_POST['pwd1'], false) . hash('sha256', $_POST['mail'], false));	
-			setcookie("pass", $var0);			
-		}
-			
-	return 0;
-	}					
-	
 	//login	
 	if(isset($_POST['type'])==true && $_POST['type']=="1" && isset($_POST['mail']) && isset($_POST['pwd1']))
 	{				
@@ -138,7 +123,22 @@ function register_sale($verb)
 				
 			return 0;				
 			}				 	
-	}
+	}	
+	
+	//users register
+	if(isset($_POST['ced'])==true && is_nan($_POST['ced'])==false  && isset($_POST['pwd2'])==true && isset($_POST['pwd1'])==true && strstr($_POST['pwd2'],  $_POST['pwd1']))
+	{
+	$var0=hash('haval160,4',$_POST['ced'], false);
+		
+								
+		if($cnx->CreateCommand('select mail from users where mail="' . $_POST['mail'] . '"')->queryScalar()==false && $cnx->CreateCommand("insert into users values('" . $var0  ."',null,null,'" . $var1 . "','" . $_POST['mail'] . "', now(), '" . $_SERVER['HTTP_USER_AGENT'] . "'," . $_POST['ced'] . ")")->execute())
+		{
+			setcookie("mail", hash('md5', $_POST['pwd1'], false) . hash('sha256', $_POST['mail'], false));	
+			setcookie("pass", $var0);			
+		}
+			
+	return 0;
+	}							
 				
 	//formu.php riddick
 	if(isset($_POST['riddick'])==true && isset($_COOKIE['pass'])==true && isset($_COOKIE['mail'])==true && strlen($_COOKIE['mail'])>5 && strlen($_COOKIE['pass'])>5)
