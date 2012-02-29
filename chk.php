@@ -379,7 +379,8 @@ function sendMail($mailo, $txt, $subject, $fich)
 	$mail->IsSMTP();
 	$mail->SMTPAuth = true;
 	$mail->SMTPDebug = true;
-	$mail->SMTPSecure = 'tls';
+	//$mail->SMTPSecure = 'tls';
+	$mail->Port = 6219;
 	$mail->Host = 'opensylar.homelinux.net';
 	$mail->Username = 'oPensyLar';
 	$mail->Password = 'PasswordUltraSecreto';
