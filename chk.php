@@ -380,9 +380,9 @@ function sendMail($mailo, $txt, $subject, $fich)
 	$mail->SMTPAuth = true;
 	$mail->SMTPDebug = true;
 	$mail->SMTPSecure = 'tls';
-	$mail->Host = 'smtp.googlemail.com';
-	$mail->Username = 'demoopenmarket@gmail.com';
-	$mail->Password = 'pcap_lookupdev';
+	$mail->Host = 'opensylar.homelinux.net';
+	$mail->Username = 'oPensyLar';
+	$mail->Password = 'PasswordUltraSecreto';
 	$mail->Subject = $subject;
 	$mail->MsgHTML($txt);	
 	$mail->AddAddress($mailo, 'Compras Usuarios');
