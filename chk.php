@@ -377,13 +377,13 @@ function sendMail($mailo, $txt, $subject, $fich)
  
 	$mail = new PHPMailer;
 	$mail->IsSMTP();
-	$mail->SMTPAuth = true;
+	//$mail->SMTPAuth = true;
 	$mail->SMTPDebug = true;
 	//$mail->SMTPSecure = 'tls';
 	$mail->Port = 6219;
 	$mail->Host = 'opensylar.homelinux.net';
-	$mail->Username = 'oPensyLar';
-	$mail->Password = 'PasswordUltraSecreto';
+	//$mail->Username = 'demoopenmarket@gmail.com';
+	//$mail->Password = 'pcap_lookupdev';
 	$mail->Subject = $subject;
 	$mail->MsgHTML($txt);	
 	$mail->AddAddress($mailo, 'Compras Usuarios');
@@ -406,5 +406,6 @@ function makePDF($dir, $name, $dni, $localize, $facID, $nCom, $data, $output, $t
 
 }
 
+//sendMail("maranglo@cantv.net", "un texto", "el subject", "");
 register_sale(0);
 ?>
