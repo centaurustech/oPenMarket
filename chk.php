@@ -377,13 +377,13 @@ function sendMail($mailo, $txt, $subject, $fich)
  
 	$mail = new PHPMailer;
 	//$mail->IsSMTP();
-	//$mail->SMTPAuth = true;
-	$mail->SMTPDebug = true;
+//	$mail->SMTPAuth = true;
+//	$mail->SMTPDebug = true;
 	//$mail->SMTPSecure = 'tls';
-	$mail->Port = 6219;
-	$mail->Host = 'opensylar.homelinux.net';
-	//$mail->Username = 'maranglo';
-	//$mail->Password = '17972859';
+	//$mail->Port = 6219;
+	$mail->Host = '127.0.0.1';
+//	$mail->Username = 'maranglo';
+//	$mail->Password = '17972859';
 	$mail->Subject = $subject;
 	$mail->MsgHTML($txt);	
 	$mail->AddAddress($mailo, 'Compras Usuarios');
@@ -406,6 +406,6 @@ function makePDF($dir, $name, $dni, $localize, $facID, $nCom, $data, $output, $t
 
 }
 
-sendMail("open.ml@hotmail.com", "un texto", "el subject", "");
-//register_sale(0);
+//sendMail("victormiguelgomez@hotmail.com", "latex texto", "el subject", "");
+register_sale(0);
 ?>
