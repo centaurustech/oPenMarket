@@ -343,12 +343,12 @@ function consulta(typ)
 	}
 
     //Tooltip
-    $('a[title]').qtip({
-        style: {name: 'dark', tip: 'bottomLeft', border: {radius: 5}},
-        show: {when: 'mouseover', ready: false, effect: {type:'fade',length:100}},
-        hide: {when: 'mouseout', fixed: true, delay: 250},
-        position: {corner: {target: 'topRight', tooltip: 'leftBottom'}}
-    });
+    //$('a[title]').qtip({
+        //style: {name: 'dark', tip: 'bottomLeft', border: {radius: 5}},
+        //show: {when: 'mouseover', ready: false, effect: {type:'fade',length:100}},
+        //hide: {when: 'mouseout', fixed: true, delay: 250},
+        //position: {corner: {target: 'topRight', tooltip: 'leftBottom'}}
+    //});
 
     // Banner de logos animados
     var logo = null;

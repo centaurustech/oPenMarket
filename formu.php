@@ -72,7 +72,7 @@ include "head.php";
 
 if(isset($_GET['type']) && $_GET['type']==5)
 {
-	echo "<script type='text/javascript' src='js/jquery.simplemodal.js'></script> <script type='text/javascript' src='js/osx.js'></script>";
+	echo "<script type='text/javascript' src='js/jquery.simplemodal.js'></script> <script type='text/javascript' src='js/osx.js'></script><br><script type='text/javascript' src='js/jquery.simplemodal.js'></script> <script type='text/javascript' src='js/jquery.qtip-1.0.0-rc3.min.js'></script><br>";	
 }
 
 ?>
@@ -505,7 +505,31 @@ $(document).ready(function()
 		
 	where(1);	
 	
+	  $('div.subindex input[title]').qtip({
+      position:
+      {
+         corner:
+         {
+            target: 'topLeft',
+            tooltip: 'bottomLeft'
+         }
+      },
+      style:
+      {
+         name: 'cream',
+         padding: '7px 13px',
+         width:
+         {
+            max: 210,
+            min: 0
+         },
+         
+         tip: true
+      }
+   });
+	
 });
+
 </script>
 
 <style type="text/css">

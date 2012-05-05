@@ -19,27 +19,27 @@
                         
                         <p>
                             <img src="img/world2.png" width="32" height="32"><label><b> Estado </b></label>
-                            <input name="edoResi" id="J2" value= <?php echo '"' . $cityEnv . '"'; ?> type="text">
+                            <input title="Este campo es necesario para realizar el envio de su compra" name="edoResi" id="J2" value= <?php echo '"' . $cityEnv . '"'; ?> type="text">
                         </p>
 	                            <p id="D2" class="warningBox oculto"></p>                        
                         <p>
                             <img src="img/map.png" width="32px" height="32px">
                             <label>  <b> Dirección </b></label>
-                            <input name="dirEnv" id="Jdir" value= <?php echo '"' . $dirEnv . '"'; ?> type="text">
+                            <input title="Direccion, numero de casa, calle, urbanizacion, vereda, apto" name="dirEnv" id="Jdir" value= <?php echo '"' . $dirEnv . '"'; ?> type="text">
                         </p>
                         
 								<p id="Ddir" class="warningBox oculto"></p>
                         
                         <p>
                             <img src="img/movil.png" width="32px" height="32px"><label for="datosPersonales_unica.celPrefijo"><b>Teléfono celular</b></label>
-                            <input maxlength="4" name="celCod" id="J5" class="inputSmall" value= <?php echo '"' . $codCel . '"'; ?> type="text">
+                            <input title="Si su numero movil pertenece a Venezuela necesitara un numero valido" maxlength="4" name="celCod" id="J5" class="inputSmall" value= <?php echo '"' . $codCel . '"'; ?> type="text">
                             <input maxlength="10" name="celNumero" id="J6" class="inputMedium" value= <?php echo '"' . $numCel . '"'; ?> type="text">
                         </p>
                         		<p id="D5" class="warningBox oculto"></p>                        
 	                            <p id="D6" class="warningBox oculto"></p>
                         <p>
                             <img src="img/phone.png" width="32px" height="32px"><label for="datosPersonales_unica.telFijoPrefijo"> <b>Teléfono fijo</b></label>
-                            <input maxlength="5" name="telCod" id="J3" class="inputSmall" value= <?php echo '"' . $codTel . '"'; ?> type="text">
+                            <input title="Si su numero de telefono pertenece a Venezuela necesitara un numero valido" maxlength="5" name="telCod" id="J3" class="inputSmall" value= <?php echo '"' . $codTel . '"'; ?> type="text">
                             <input maxlength="10" name="telNumero" id="J4" class="inputMedium" value= <?php echo '"' . $numTel . '"'; ?> type="text">
                         </p>                       
 	                            <p id="D4" class="warningBox oculto"></p>
@@ -82,6 +82,16 @@
                             
                              type="text">
                         </p>
+                                                
+                        <p>
+                        <img src="img/money.png"><label><b> Empresa de envio</b></label>
+                            <select>                                                          
+                                <option value="2">Ipostel</option>
+                                <option value="3">Aerocav</option>
+                                <option value="1">Zoom</option>
+                                <option value="4">MRW</option> 
+                              </select>
+                        </p>
                         
                         <p>
                             <img src="img/money.png"><label><b> Datos de Pago</b></label>
@@ -121,9 +131,9 @@
                                 
 	?>
 	
-									</option>                                                                                                                                                           
-                            
+									</option>                                                                                                                                                                                       
                             </select>
+                            </p>
                             
 <p>                        
              <img src="img/validate.png" alt="fecha Tarjeta Credito" id="JTarimg0">
@@ -158,14 +168,15 @@
 					<br>
 					<img id="Ipago" width="32" height="32" src="img/pago1.png" alt="fecha Tarjeta Credito">                            
 					<label id="Ppago"><b>Numero tarjeta:</b></label>
-					<input maxlength="14" name="serialTarj" id="JserialTarj" class="inputMedium" value= <?php echo '"' . $codTarj . '"'; ?> type="text">
+					<input title="Campo de pago" maxlength="14" name="serialTarj" id="JserialTarj" class="inputMedium" value= <?php echo '"' . $codTarj . '"'; ?> type="text">
 										
 					<br>
 					<br>
 					<img src="img/codeCC.png" alt="fecha Tarjeta Credito" id="JTarimgn">
 					<label id="PcodTarj"><b>Codigo Tarjeta:</b></label>
-					<input maxlength="4"  name="codTarj" id="JcodTarj" class="inputSmall" value= <?php echo '"' . $extrapago . '"'; ?> type="text">
+					<input title="Campo de pago" maxlength="4"  name="codTarj" id="JcodTarj" class="inputSmall" value= <?php echo '"' . $extrapago . '"'; ?> type="text">
 									
 					<p id="Dpago" class="warningBox oculto"></p>                                                    
 	                            
-					</p>	                         
+					</p>
+					</div>	                         

@@ -17,8 +17,11 @@ echo $_COOKIE['marka'];
 
 ?>                                                            
                                         
-                    type="text"></span></span>
+                    type="text">
+                    </span>
+                    </span>
                 </span>
+<p>Ingrese un producto a buscar, puede ingresar el nombre parcial o completo del producto<br>Por ejemplo: En lugar de <b>atroveran</b> puede ingresar <b>atro</b> para realizar busquedas en nuestro stock</p>
                 <span class="formInlineInputs">                
                  
                     <label for="location">Buscador de productos</label>

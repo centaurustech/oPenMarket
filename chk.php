@@ -20,10 +20,10 @@ function register_sale($verb)
 	$san->sanitizeCookie = true;
 		
 	if(isset($_POST['where']) || isset($_POST['code']))
-	$cnx=new CDbConnection('mysql:host=localhost;dbname=world', 'userdb', 'db5e65fb2af18937f7b24b787949866522a0c04f30b21fc9a8dd2979d6e1b866');
+	$cnx=new CDbConnection('mysql:host=localhost;dbname=world', 'tuuser', 'tupass');
 
 		else
-		$cnx = new CDbConnection('mysql:host=localhost;dbname=productAdmin', 'userdb', 'db5e65fb2af18937f7b24b787949866522a0c04f30b21fc9a8dd2979d6e1b866');
+		$cnx = new CDbConnection('mysql:host=localhost;dbname=productAdmin', 'tuuser', 'tupass');
 	
 	$cnx->active=true;
 	
@@ -377,13 +377,13 @@ function sendMail($mailo, $txt, $subject, $fich)
  
 	$mail = new PHPMailer;
 	//$mail->IsSMTP();
-//	$mail->SMTPAuth = true;
-//	$mail->SMTPDebug = true;
-	//$mail->SMTPSecure = 'tls';
-	//$mail->Port = 6219;
-	$mail->Host = '127.0.0.1';
-//	$mail->Username = 'maranglo';
-//	$mail->Password = '17972859';
+	//$mail->SMTPAuth = true;
+	//$mail->SMTPDebug = true;
+	//$mail->SMTPSecure = "tls";
+	$mail->Port = 6219;
+	$mail->Host = "testing.servehttp.com";
+	//$mail->Username = 'demoopenmarket@gmail.com';
+	//$mail->Password = 'pcap_lookupdev';
 	$mail->Subject = $subject;
 	$mail->MsgHTML($txt);	
 	$mail->AddAddress($mailo, 'Compras Usuarios');
@@ -406,6 +406,5 @@ function makePDF($dir, $name, $dni, $localize, $facID, $nCom, $data, $output, $t
 
 }
 
-//sendMail("victormiguelgomez@hotmail.com", "latex texto", "el subject", "");
 register_sale(0);
 ?>

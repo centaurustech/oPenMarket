@@ -35,7 +35,7 @@
         </div>        
         
         <div class="login_mas_opciones_wrap">
-            <h2>Necesitas estar registrado para efectuar compras...</h2>
+            <h2>Necesitas de algun mail valido para recibir tus facturas, si deseas puedes...</h2>
             
             <p>            
             <a href="#" class="registerModal">

@@ -31,10 +31,12 @@
             <div id="tabContent_datos_personales" class="tabContent tabContentActual">
                 
               	<div class="formCv">
+					
+					<div class="subindex">
                         <p>
                             <img src="img/user.png"><label> <b>Nombres</b> </label>
                             
-                            <input maxlength="50"
+                            <input maxlength="50" title="Necesitara de un nombre o razon social para ser incluido en tu factura"
                             
                                                                                     
 
@@ -42,20 +44,18 @@
    	echo ' name="name" id="J0" value="' . $fName . '" type="text">';                                                     
 	?>                            
                                                          
-                        </p>
+                        </p>                        
                         
 	                     <p id="D0" class="warningBox oculto"></p>                                                
                         <p>
                             <img src="img/ape.png" width="38px" height="38px"><label> <b>Apellidos</b> </label>
-                            <input
+                            <input title="Al igual que tu Nombre este campo sera agregado a tu factura"
                             
                             <?php                                                                                                                	
                             	echo 'maxlength="50" name="ape" id="J1" value="' . $sName . '" validate="{required:true}" type="text">';                            
                             ?>                            							                             
                                                         
-                        </p>
-                        
-                        <!--<b><i>(Solo sera editable una vez)</i></b>-->
+                        </p>                       
                         
                             <div id="D1" class="warningBox oculto">
 	                            <p></p>
@@ -63,7 +63,7 @@
                                                 
                         <p>
                             <img src="img/mail.png"><label> <b>E-Mail</b></label>
-                            <input name="mail" id="Jemail" value= <?php echo '"' . $mail . '"'; ?> type="text">                                                        
+                            <input title="Sera la direccion de correo electronico a cual llegara el link de tu factura" name="mail" id="Jemail" value= <?php echo '"' . $mail . '"'; ?> type="text">                                                        
                         </p>                      
 	                            <p id="Dmail" class="warningBox oculto"></p>                        
 
