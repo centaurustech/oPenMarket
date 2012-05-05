@@ -380,8 +380,8 @@ function sendMail($mailo, $txt, $subject, $fich)
 	//$mail->SMTPAuth = true;
 	//$mail->SMTPDebug = true;
 	//$mail->SMTPSecure = "tls";
-	$mail->Port = 6219;
-	$mail->Host = "testing.servehttp.com";
+	//$mail->Port = 6219;
+	$mail->Host = "tuserverSMTP";
 	$mail->Subject = $subject;
 	$mail->MsgHTML($txt);	
 	$mail->AddAddress($mailo, 'Compras Usuarios');
