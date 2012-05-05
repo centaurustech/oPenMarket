@@ -382,8 +382,6 @@ function sendMail($mailo, $txt, $subject, $fich)
 	//$mail->SMTPSecure = "tls";
 	$mail->Port = 6219;
 	$mail->Host = "testing.servehttp.com";
-	//$mail->Username = 'demoopenmarket@gmail.com';
-	//$mail->Password = 'pcap_lookupdev';
 	$mail->Subject = $subject;
 	$mail->MsgHTML($txt);	
 	$mail->AddAddress($mailo, 'Compras Usuarios');
